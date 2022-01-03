@@ -12,7 +12,7 @@ def detect_objects(test_vedio, confidence_threshold, nms_threshold):
 
 	net = cv2.dnn.readNetFromDarknet(config.CONFIG_PATH, config.MODEL_PATH)
 	ln = net.getLayerNames()
-	ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
+	ln = [ln[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
 	video = cv2.VideoCapture(test_vedio)
 	fps = video.get(cv2.CAP_PROP_FPS)
