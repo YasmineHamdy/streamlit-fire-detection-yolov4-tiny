@@ -2,4 +2,5 @@ numpy==1.20.2
 streamlit==0.79.0
 opencv-python
 opencv-python-headless
+libgl1-mesa-glx
 imutils 
